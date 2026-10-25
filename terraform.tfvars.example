@@ -1,0 +1,22 @@
+root_id              = "ent"
+root_name            = "DevOps Insiders Enterprise Root"
+primary_location     = "eastus"
+secondary_location   = "westus2"
+environment          = "prod"
+
+hub_vnet_address_space       = ["10.0.0.0/16"]
+spoke_workload_address_space = ["10.1.0.0/16"]
+spoke_shared_address_space   = ["10.2.0.0/16"]
+
+firewall_sku_tier    = "Premium"
+enable_bastion       = true
+log_retention_days   = 90
+
+tags = {
+  Architecture     = "Azure-Landing-Zones-CAF"
+  ManagedBy        = "Terraform"
+  Owner            = "Swapnil Agarwal"
+  CostCenter       = "CC-1044-IT"
+  SecurityBaseline = "CIS-Azure-Benchmark-v2"
+  Environment      = "Production"
+}
