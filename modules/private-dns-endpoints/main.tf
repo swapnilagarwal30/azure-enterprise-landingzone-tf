@@ -18,7 +18,7 @@ locals {
 }
 
 resource "azurerm_private_dns_zone" "zones" {
-  for_each            = toset(locals.private_dns_zones)
+  for_each            = toset(local.private_dns_zones)
   name                = each.key
   resource_group_name = var.resource_group_name
   tags                = var.tags

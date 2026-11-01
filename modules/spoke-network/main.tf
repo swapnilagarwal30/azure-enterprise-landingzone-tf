@@ -49,7 +49,7 @@ resource "azurerm_route_table" "spoke" {
   name                          = "rt-${var.spoke_name}-${var.environment}"
   location                      = azurerm_resource_group.spoke.location
   resource_group_name           = azurerm_resource_group.spoke.name
-  disable_bgp_route_propagation = false
+  bgp_route_propagation_enabled = true
   tags                          = var.tags
 
   route {
